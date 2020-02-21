@@ -1,2 +1,7 @@
-# For help please open this file in your browser:
-    \rf_automation_toolbox\Antenna_Analysis\docs\build\html\index.html
+# For help first:
+    1. run ./buildall.py
+    2. open in browser ./docs/build/html/index.html 
+    
+            OR
+            
+       open in PDF viewr ./docs/build/latex/AntennaAnalysis.PDF
