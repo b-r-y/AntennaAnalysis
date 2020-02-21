@@ -1,0 +1,159 @@
+Defined reference frequency for open boundary condition (1000 MHz) is larger
+than the lowest relevant system frequency (monitor at 500 MHz).
+Please check open boundary settings to ensure accurate monitor results for the
+lowest frequency of interest.
+
+--------------------------------------------------------------------------------
+
+Solver started at: 11:49 AM Monday, 26. November 2018
+
+  Module:  Time Domain: S-Parameter (Win 64)
+  Version: 2018.6 Release from 2018-06-15 (change 610495)
+
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 1
+======================================================================
+
+Stimulation at discrete port 1 
+
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  MHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+The following discrete edge port is connected to metal material:
+	1
+
+--------------------------------------------------------------------------------
+Mesh statistics:
+
+   Hexahedral mesh type: PBA [accuracy enhancement is enabled]
+
+   Parallelization type: domain decomposition
+      Number of parallel working threads: 1
+      Number of calculation domains used: 1
+
+   PBA fill limit: 99.00% (inverse)
+
+
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 48.1524 mm
+  Xmax: expanded open, 4 Layer, depth 48.1524 mm
+
+  Ymin: expanded open, 4 Layer, depth 48.1524 mm
+  Ymax: expanded open, 4 Layer, depth 48.1524 mm
+
+  Zmin: expanded open, 4 Layer, depth 46.6349 mm
+  Zmax: expanded open, 4 Layer, depth 46.6349 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         500
+  Fmax:         1500
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Port: 1
+
+  Discrete element, reference impedance = 50 Ohm
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	132400
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  CAD preparation     20088                         24538152     24538152     
+  Matrices calc.      28908                         24482876     24468856     
+  Solver run total    36632                         24562680     24518776     
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	Note-bory-01 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware Accelerator Device not activated
+
+  Number of mesh cells:             	20736
+  Excitation duration:              	7.10909750e+000 ns 
+  Calculation time for excitation:  	1 	s
+  Number of calculated pulse widths:	2.50447 
+  Steady state accuracy limit:      	-40	dB 
+  Simulated number of time steps:   	4836 
+  Maximum number of time steps:     	38618 
+  Time step width:
+     without subcycles:             	3.68166934e-003 ns
+     used:                          	3.68166934e-003 ns
+
+  CAD preparation time:          	0      	s
+  Matrix calculation time:          	3 	s
+  Solver setup time:                	1 	s
+  Solver loop time:                 	3 	s
+  Solver post processing time:      	0 	s
+                                    	------------
+  Total solver time:                	7 	s
+
+--------------------------------------------------------------------------------
+
+  Adaptive port meshing time:       	0      	s
+  Total solver time (all cycles):   	7      	s
+                                    	------------
+  Total simulation time:            	7      	s
+
+--------------------------------------------------------------------------------
+Solver finished at: 11:49 AM Monday, 26. November 2018
+
+
+
+--------------------------------------------------------------------------------
+Farfield exported to folder:
+C:\Users\bry\Documents\GitHub\rf_automation_toolbox\Antenna_Analysis\example\dipole\Export\Farfield\
+C:\Users\bry\Documents\GitHub\rf_automation_toolbox\Antenna_Analysis\example\dipole\Export\Farfield\
+
+--------------------------------------------------------------------------------
+Creating parametric 1D results for Run ID 3
+
+--------------------------------------------------------------------------------

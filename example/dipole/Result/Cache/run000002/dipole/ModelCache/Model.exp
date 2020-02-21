@@ -1,0 +1,11 @@
+@CACHEFILEVERSION 2
+@DOUBLE
+-(antenna_len)/2#
+-150
+antenna_len/2#
+150
+diameter/2#
+0.5
+lambda/2#
+300
+@LONG

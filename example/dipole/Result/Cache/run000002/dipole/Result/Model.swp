@@ -1,0 +1,20 @@
+==========================================================================
+Sequence: Sequence 1
+==========================================================================
+
+--------------------------------------------------------------------------
+Parameter Values: 
+
+   lambda = 299
+
+Structure update: Successful
+          Solver: Successful
+     Solver time: 0 hours, 0 min., 19 sec.
+--------------------------------------------------------------------------
+Parameter Values: 
+
+   lambda = 600
+
+Structure update: Successful
+          Solver: Successful
+     Solver time: 0 hours, 0 min., 14 sec.
