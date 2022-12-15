@@ -7,6 +7,8 @@ import os
 
 WORKING_DIR = os.getcwd()
 
+os.system("python -m pip install -r requirements.txt")
+
 #os.environ["SPHINX_APIDOC_OPTIONS"]="members,show-inheritance,special-members"
 
 os.chdir("docs")
