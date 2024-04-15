@@ -441,7 +441,7 @@ class PatPlot():
         '''
         COnverts from spehrical to cartesian coordinates.
         '''
-        vth,vph = includes.misc.get_angle_vectors(data, 'closed')
+        vth, vph = includes.misc.get_angle_vectors(data, 'closed')
 
         x_data = (data/data.max()) * np.sin(vth.T) * np.cos(vph.T)
         y_data = (data/data.max()) * np.sin(vth.T) * np.sin(vph.T)
@@ -451,13 +451,14 @@ class PatPlot():
 
     def __plot_3d(self, ax1, data_to_plot, cmap):
         '''
-        Converts from spherical to cartesian coordinates and plots a ``plot_surface`` with patch
-        faces painted according to ``cmap``.
+        Converts from spherical to cartesian coordinates and plots a
+        ``plot_surface`` with patch faces painted according to ``cmap``.
         '''
         x_data, y_data, z_data = self.__spherical_to_cartesian(data_to_plot)
-        ax1.plot_surface(x_data, y_data, z_data, facecolors=cmap(data_to_plot / data_to_plot.max()))
+        ax1.plot_surface(x_data, y_data, z_data,
+                         facecolors=cmap(data_to_plot / data_to_plot.max()))
 
-    def __save_figure(self, figure_file_name, fig, extra_artists = None):
+    def __save_figure(self, figure_file_name, fig, extra_artists=None):
         '''
         Saves the figures in PNG, PDF and SVG file formats.
         '''
@@ -637,7 +638,7 @@ class PatPlot():
         ax1.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.8])
 
         plt.minorticks_on()
-        plt.grid(b=True, which='both')
+        plt.grid(visible=True, which='both')
         plt.show(block=True)
 
         self.__save_figure(info_str, fig,lgd)
@@ -693,14 +694,14 @@ class PatPlot():
         ax1.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.8])
         fig.colorbar(mesh, ax=ax1)
 
-        plt.grid(b=False, which='both')
+        plt.grid(visible=False, which='both')
         plt.show(block=True)
 
         self.__save_figure(info_str, fig,lgd)
 
         return fig
 
-    def make_3d_plot(self,ind, n_bins = 30):
+    def make_3d_plot(self, ind, n_bins=30):
         '''
         Makes a 3D pattern plot from the plotting object at index ``ind`` and using ``n_bins``
         color map levels.
@@ -718,11 +719,13 @@ class PatPlot():
                 PDF/SVG and PNG formats at the output folder in the settings.
         '''
         fig = plt.figure()
-        ax1 = self.__make_axes(fig, override = '3d')
-        info_str,_ = self.__make_title(ax1, '3D Sphere')
+        ax1 = self.__make_axes(fig, override='3d')
+        info_str, _ = self.__make_title(ax1, '3D Sphere')
 
         curr_p = self.patterns[ind]
-        curr_p = self.__apply_plot_range_limit(self.plot_settings.get('plot_range'), curr_p)
+        curr_p = self.__apply_plot_range_limit(
+            self.plot_settings.get('plot_range'),
+            curr_p)
         data_to_plot = self.__apply_scale(ind, curr_p)
         z_limit = self.__apply_dynamic_range_limit(curr_p)
         data_to_plot[data_to_plot < z_limit[0]] = z_limit[0]
@@ -734,22 +737,25 @@ class PatPlot():
 
         self.__plot_3d(ax1, data_to_plot, cmap)
 
-        #ax1.set_aspect('equal') # isssue with matplotlib v3.1.0 !!!! Need to find a workaround...
-        ax1.axes.set_xlim([-1,1])
-        ax1.axes.set_ylim([-1,1])
-        ax1.axes.set_zlim([-1,1])
+        ax1.set_aspect('equal')
+        ax1.axes.set_xlim([-1, 1])
+        ax1.axes.set_ylim([-1, 1])
+        ax1.axes.set_zlim([-1, 1])
         ax1.axis('off')
 
-        lgd = ax1.legend([plt.Rectangle((0,0),1,1)],[' '.join(self.legends[ind])],\
-                         loc='upper center', bbox_to_anchor=(0.5, -0.10), fancybox=True, \
+        lgd = ax1.legend([plt.Rectangle((0, 0), 1, 1)],
+                         [' '.join(self.legends[ind])],
+                         loc='upper center', bbox_to_anchor=(0.5, -0.10),
+                         fancybox=True,
                          shadow=True, ncol=1)
         box = ax1.get_position()
-        ax1.set_position([box.x0, box.y0 + box.height * 0.1, box.width, box.height * 0.8])
+        ax1.set_position([box.x0, box.y0 + box.height * 0.1,
+                          box.width, box.height * 0.8])
         fig.colorbar(color_map, ax=ax1)
 
-        plt.grid(b=False, which='both')
+        # plt.grid(visible=False, which='both')
         plt.show(block=True)
 
-        self.__save_figure(info_str, fig,lgd)
+        self.__save_figure(info_str, fig, lgd)
 
         return fig

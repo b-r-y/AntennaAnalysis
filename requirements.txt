@@ -4,3 +4,4 @@ openpyxl
 numpy
 scipy
 matplotlib
+PyQt5

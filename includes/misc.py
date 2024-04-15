@@ -7,24 +7,28 @@ import sys
 import numpy as np
 from numpy import inf
 
+
 def lin2log(field, field_data):
     '''
     Converts the ``field_data`` of ``field`` from linear to logarithmic scale.
 
     Arguments:
         field (str): the field being converted. Options are the same as in ``fetch_field``
-        field_data (num,num): a matrix witht the field values along Theta and Phi
+        field_data (num,num): a matrix with the field values along Theta and Phi
 
     Returns:
         float: ``field_data`` converted to logarithmic scale depending on the ``field``
 
     '''
-    if any(field in s for s in ['Gabs', 'Gth','Gph', 'GL', 'GR', 'Eabs']):
-        field_data = 10*np.log10(field_data)
-    elif any(field in s for s in ['AR', 'Eth', 'Eph','El', 'ER']):
-        field_data = 20*np.log10(np.abs(field_data))
+    if any(field in s for s in ['Gabs', 'Gth', 'Gph', 'GL', 'GR', 'Eabs']):
+        with np.errstate(divide='ignore'):
+            field_data = 10*np.log10(field_data)
+    elif any(field in s for s in ['AR', 'Eth', 'Eph', 'El', 'ER']):
+        with np.errstate(divide='ignore'):
+            field_data = 20*np.log10(np.abs(field_data))
     field_data[field_data == -inf] = -100
     return field_data
+
 
 def close_sphere(matrix):
     '''
