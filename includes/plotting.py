@@ -355,7 +355,7 @@ class PatPlot():
         elif override == 'contour':
             ax1 = fig.add_axes([0.1,0.1,0.8,0.9],projection='rectilinear')
         elif override == '3d':
-            ax1 = Axes3D(fig,rect = [0.1,0.1,0.8,0.9])
+            ax1 = fig.add_axes([0.1,0.1,0.8,0.9],projection='3d')
         return ax1
 
     def __get_standard_plot_axis(self, plot_angle):
