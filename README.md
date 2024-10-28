@@ -1,3 +1,14 @@
+# Prepare the environment and prerequisites
+
+This is best run in a python virtual environment.
+
+The external packages needed (beyond the python module dependencies) are:
+
+* a TeX compiler
+* python virtual environment
+
+On Linux this can be done with the `setup_evnironment.sh` script.
+
 # Install
 
 To install, navigate to the cloned folder and run:
