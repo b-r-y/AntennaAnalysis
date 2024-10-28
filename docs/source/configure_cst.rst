@@ -29,21 +29,14 @@ The plotting options in CST have to be configured for the default IEEE coordiant
 **keywords** : {antennas;electronic equipment testing;measurement standards;IEEE standard;test procedures;antenna properties;ANSI/IEEE Std 149-1965;radiation patterns;antenna range;antenna test facilities; instrumentation; Antennas; Electronic equipment testing; Measurement standards}
 **URL**: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=19510&isnumber=768
 
-This means spehrical coordinate system where the Theta angle is defined from 0 to 180 degrees and the Phi angle is defined from 0 to 360 degrees. This is configured as shown in :numref:`fig_farfield_plot_general` and :numref:`fig_farfield_coordinate_system`.
+This means spehrical coordinate system where the Theta angle is defined from 0 to 180 degrees and the Phi angle is defined from 0 to 360 degrees. This is configured as shown in :numref:`fig_farfield_plot_general`.
 
 .. _fig_farfield_plot_general:
 .. figure:: img/Farfield_Plot_General.png
     :align: center
     :width: 600px
 
-    Setting for the default IEEE coordinate system - plot range and steps.
-
-.. _fig_farfield_coordinate_system:
-.. figure:: img/cst_coordinate_system.png
-    :align: center
-    :width: 600px
-
-    Setting for the default IEEE coordinate system - spherical coordinate system.
+    Setting for the default IEEE coordinate system.
 
 The plot mode must be set to realized gain since the python module ONLY works with this import type. This is illustrated in :numref:`fig_farfield_plot_plot_mode`.
 

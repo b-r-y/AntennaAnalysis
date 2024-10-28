@@ -1,8 +1,9 @@
-**vscode
-**__pycache__
-**build
-**.venv
-docs/source/coverage
-docs/source/doctrees
-docs/source/modules
+**.vscode
 **output
+**.venv
+**build
+**__pycache__
+**docs/source/doctrees
+**docs/source/modules
+**docs/source/coverage
+**antenna_analysis.egg-info

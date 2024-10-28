@@ -24,9 +24,9 @@ References
 
 .. [BALANIS]
     Balanis, Constantine A: Antenna theory: analysis and design : Wiley-Interscience, 2005
-    
+
 .. [NEEDCITATION]
-    A proper citation is needed for this! Whatever statement or value is given in the 
+    A proper citation is needed for this! Whatever statement or value is given in the
     help, it requires proper scientific publication to back it up. When rule of thumb and
-    website recomendations are used this link must be inserted to clarify the lack of proper
+    website recommendations are used this link must be inserted to clarify the lack of proper
     scientific reference.

@@ -14,15 +14,14 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..//..'))
-sys.path.insert(0, os.path.abspath('..//..//include'))
+sys.path.insert(0, os.path.abspath('..//..//antenna_analysis'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'Antenna Analysis'
-copyright = '2018, Boyan Yanakiev'
-author = 'Boyan Yanakiev'
+copyright = '2018'
+author = 'b-r-y'
 
 # The short X.Y version
 version = ''
@@ -96,7 +95,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -167,7 +166,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'AntennaAnalysis.tex', 'Antenna Analysis Documentation',
-     'Boyan Yanakiev', 'manual'),
+     'b-r-y', 'manual'),
 ]
 
 
@@ -219,7 +218,7 @@ epub_exclude_files = ['search.html']
 # -- Options for intersphinx extension ---------------------------------------
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
+intersphinx_mapping = {'python': ('http://docs.python.org/3.12', None)}
 
 # -- Options for todo extension ----------------------------------------------
 
