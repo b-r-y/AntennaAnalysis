@@ -5,7 +5,6 @@ Created on Nov 9, 2018
 """
 
 # For use in serialization and de-serialization to json
-# from __future__ import division
 import sys
 from collections import OrderedDict
 from typing import Any, Dict
