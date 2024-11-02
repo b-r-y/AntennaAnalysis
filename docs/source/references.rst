@@ -25,6 +25,19 @@ References
 .. [BALANIS]
     Balanis, Constantine A: Antenna theory: analysis and design : Wiley-Interscience, 2005
 
+.. [TS38_901]
+    Study on channel model for frequencies from 0.5 to 100 GHz\
+    (3GPP TR 38.901 version 18.0.0 Release 18), May 2014\
+    **URL** :\
+    https://www.etsi.org/deliver/etsi_tr/138900_138999/138901/18.00.00_60/tr_138901v180000p.pdf
+
+.. [TS38_803]
+    3rd Generation Partnership Project; Technical Specification Group Radio Access Network;\
+    Study on new radio access technology: Radio Frequency (RF) and co-existence aspects\
+    (Release 14), V14.4.0 (2024-06)\
+    **URL** :\
+    https://www.3gpp.org/ftp/Specs/archive/38_series/38.803/38803-e40.zip
+
 .. [NEEDCITATION]
     A proper citation is needed for this! Whatever statement or value is given in the
     help, it requires proper scientific publication to back it up. When rule of thumb and

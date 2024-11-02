@@ -1,9 +1,11 @@
 """Pattern creator module."""
-from typing import Any
-from .factory import ObjectFactory
 
-from .pyramidal_horn import PyramidalHornBuilder
-from .circular_patch import CircularPatchBuilder
+from typing import Any
+from antenna_analysis.imports.factory import ObjectFactory
+
+from antenna_analysis.imports.pyramidal_horn import PyramidalHornBuilder
+from antenna_analysis.imports.circular_patch import CircularPatchBuilder
+from antenna_analysis.imports.tgpp_antenna import TGPPAntennaBuilder
 
 
 class PatternCreator(ObjectFactory):
@@ -20,10 +22,12 @@ class PatternCreator(ObjectFactory):
                     :class:`~antenna_analysis.imports.pyramidal_horn.PyramidalHorn`
                 * ``Circular Patch`` - creates a pattern of type \
                     :class:`~antenna_analysis.imports.circular_patch.CircularPatch`
+                * ``3GPP Antenna`` - creates a pattern of type \
+                    :class:`~antenna_analysis.imports.tgpp_antenna.TGPPAntenna`
 
 
         Returns:
-            pattern object  (PyramidalHorn, CircularPatch): \
+            pattern object  (PyramidalHorn, CircularPatch, TGPPAntenna): \
                 an object of one of the possible patterns
 
         """
@@ -33,5 +37,6 @@ class PatternCreator(ObjectFactory):
 pattern_creator = PatternCreator()
 
 # Register antennas
-pattern_creator.register_builder('Pyramidal Horn', PyramidalHornBuilder())
-pattern_creator.register_builder('Circular Patch', CircularPatchBuilder())
+pattern_creator.register_builder("Pyramidal Horn", PyramidalHornBuilder())
+pattern_creator.register_builder("Circular Patch", CircularPatchBuilder())
+pattern_creator.register_builder("3GPP Antenna", TGPPAntennaBuilder())

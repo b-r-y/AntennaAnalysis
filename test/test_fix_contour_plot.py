@@ -1,6 +1,6 @@
 import sys
 
-sys.path.insert(0, "C:\\Users\\boyan\\git\\antenna_analysis")
+sys.path.insert(0, "C:\\Users\\boyan\\git\\AntennaAnalysis")
 
 import numpy as np
 
