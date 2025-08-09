@@ -2,7 +2,7 @@
 
 import sys
 
-sys.path.insert(0, "C:\\Users\\boyan\\git\\AntennaAnalysis")
+sys.path.insert(0, "/workspaces/AntennaAnalysis")
 
 import numpy as np
 
