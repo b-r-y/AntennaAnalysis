@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Update and install dependencies
-RUN apk update && apk add --no-cache python3 py3-pip texmf-dist texlive
+RUN apk update && apk add --no-cache python3 py3-pip git texmf-dist texlive-full
 
 # Set up a working directory
 WORKDIR /workspace
