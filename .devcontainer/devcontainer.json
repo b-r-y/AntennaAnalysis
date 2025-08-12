@@ -14,5 +14,6 @@
                 "python.defaultInterpreterPath": "/workspace/.venv/bin/python"
             }
         }
-    }
+    },
+    "mounts": [ "source=${env:SSH_AUTH_SOCK},target=/ssh-agent,type=bind" ],
 }
